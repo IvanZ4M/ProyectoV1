@@ -1,0 +1,557 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+}
+
+:root{
+    --degradado: rgb(0,0,0);
+    --degradado2: rgb(238,174,202);
+    --degradado3: rgb(255,116,116);
+    --degradado4: rgb(154,154,154);
+}
+
+/* form{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
+    justify-items: center;
+    gap: 1rem;
+    background: var(--degradado4);
+    box-shadow:  0 4px 10px rgb(77, 77, 77);
+    border-radius: 1rem;
+} */
+
+input{
+    margin: 1rem;
+    height: 2rem;
+    border-radius: .5rem; 
+}
+
+input:required{
+    border: 1px black solid ;
+}
+
+input:checked{
+    transform: scale(2);
+}
+
+input[type="email"]:valid{
+    color: white;
+    background-color: rgb(207, 248, 209);
+    text-align: center;
+}
+
+input[type="email"]:focus{
+    box-shadow: 0 0 10px yellow;
+    border: none;
+    outline: none;
+}
+
+input[type="email"]:invalid{
+    color: white;
+    background-color: var(--degradado3);
+}
+
+
+input[type="email"]:hover{
+    box-shadow: 0 0 10px black;
+    border: none;
+    outline: none;
+}
+
+input[type="password"]:required{
+    border: 1px black solid ;
+}
+
+input[type="password"]:hover{
+    box-shadow: 0 0 10px black;
+    border: none;
+    outline: none;
+}
+
+input[type="password"]:focus{
+    box-shadow: 0 0 10px yellow;
+    border: none;
+    outline: none;
+}
+
+
+.caja{
+    border: 1px solid black;
+    background-color: lightgrey;
+    text-align: center;
+    line-height: 150px;
+}
+
+.grid-layout0{
+    height: 1000px;
+    display: grid;
+    grid-template-areas:  'l ll ll'
+                          'l ll ll'
+                          'lf ll ll';
+    grid-template-rows: 400px 400px 200px;
+}
+
+.x1{
+    grid-area: l;
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,0,51,1) 100%);
+}
+
+.x2{
+    grid-area: ll;
+    background-color: white;
+}
+
+.x3{
+    grid-area: lf;
+    background-color: black;
+}
+
+.grid-layout{
+    height: 2370px;
+    display: grid;
+    grid-template-areas:  'ss ss' 
+                          'bc bc' 
+                          'rc rf'
+                          'rs rx'
+                          'frt frt';
+ grid-template-rows: 70px 1000px 500px 500px 300px;   
+}
+
+.c1{
+    grid-area: ss;
+    background-color: white;
+}
+
+.c2{
+    grid-area: bc;
+    background-color: white;
+}
+
+.c3{
+    grid-area: rc;
+    background-color: white;
+}
+
+.c4{
+    grid-area: rf;
+    background-color: white;
+}
+
+.c5{
+    grid-area: rs;
+    background-color: white;
+}
+
+.c6{
+    grid-area: rx;
+    background-color: white;
+}
+
+.c7{
+    grid-area: frt;
+    background-color: white;
+}
+
+
+.grid-layout1{
+    height: 1300px;
+    display: grid;
+    grid-template-areas:  'lg lg'
+                          'brr brr'
+                          'crr crr'
+                          'pii pii';
+    grid-template-rows: 40px 60px 1000px 200px;
+}
+
+.z1{
+    grid-area: lg;
+    background-color: white;
+}
+
+.z2{
+    grid-area: brr;
+    background-color: white;
+}
+
+.z3{
+    grid-area: crr;
+    background-color: gray;
+}
+
+.z4{
+    grid-area: pii;
+    background-color: black;
+}
+
+.grid-layout2{
+    height: 1000px;
+    display: grid;
+    grid-template-areas:  'l l'
+                          'b b'
+                          'cu cu'
+                          'c c'
+                          'p p';
+    grid-template-rows: 40px 40px 500px 500px 200px;
+    background-color: black;
+}
+
+.e1{
+    grid-area: l;
+    background-color: white;
+}
+
+.e2{
+    grid-area: b;
+    background-color: white;
+}
+
+.e3{
+    grid-area: cu;
+    background-color: white;
+}
+
+.e4{
+    grid-area: c;
+    background-color: white;
+}
+
+.e5{
+    grid-area: p;
+    background-color: black;
+}
+
+.grid-layout3{
+    height: 1000px;
+    display: grid;
+    grid-template-areas:  'lo lo lo'
+                          'ba ba ba'
+                          'cu cu cu2'
+                          'cu cu cu2'
+                          'pi pi pi';
+    grid-template-rows: 40px 40px 350px 350px 200px;
+    background-color: black;
+
+}
+
+.f1{
+    grid-area: lo;
+    background-color: white;
+}
+
+.f2{
+    grid-area: ba;
+    background-color: white;
+}
+
+.f3{
+    grid-area: cu;
+    background-color: white;
+}
+
+.f4{
+    grid-area: cu2;
+    background-color: white;
+}
+
+.f5{
+    grid-area: pi;
+    background-color: black;
+}
+
+.grid-layout4{
+    height: 1000px;
+    display: grid;
+    grid-template-areas:  'lo lo lo'
+                          'ba ba ba'
+                          'cu cu cu2'
+                          'cu cu cu2'
+                          'pi pi pi';
+    grid-template-rows: 40px 40px 350px 350px 200px;
+    background-color: black;
+}
+
+.g1{
+    grid-area: lo;
+    background-color: white;
+}
+
+.g2{
+    grid-area: ba;
+    background-color: white;
+}
+
+.g3{
+    grid-area: cu;
+    background-color: white;
+}
+
+.g4{
+    grid-area: cu2;
+    background-color: white;
+}
+
+.g5{
+    grid-area: pi;
+    background-color: rgb(2, 0, 0);
+}
+
+.imgg{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    left: 890px;
+    top: -25px;
+
+}
+
+.imgg2{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    left: 770px;
+    top: -25px; 
+}
+/* .anim{
+    margin: 0px;
+    top: 25;
+    left: 2%;
+    height: 2.5rem; 
+    width: 8rem;
+    background-color: black;
+    position: absolute;
+    place-content: center;
+    color: white;
+    position: absolute;
+}
+
+.anim:hover{
+    height: 15rem;
+    width: 10rem;
+    background-color: gray;
+    transition: 500ms;
+}
+
+.anim2{
+    margin-top: 0px;
+    top: 25;
+    left: 25%;
+    height: 2.5rem; 
+    width: 8rem;
+    background-color: black;
+    position: absolute;
+    animation-name: prin;
+    place-content: center;
+    color: white;
+    position: absolute;
+}
+
+.anim2:hover{
+    height: 15rem;
+    width: 10rem;
+    background-color: gray;
+    transition: 500ms;
+}
+
+.anim3{
+    margin: 0px;
+    top: 25;
+    left: 50%;
+    height: 2.5rem; 
+    width: 8rem;
+    background-color: black;
+    position: absolute;
+    animation-name: prin;
+    place-content: center;
+    color: white;
+    position: absolute;
+}
+
+.anim3:hover{
+    height: 15rem;
+    width: 10rem;
+    background-color: gray;
+    transition: 500ms;
+}
+
+.anim4{
+    margin: 0px;
+    top: 25;
+    left: 70%;
+    height: 2.5rem; 
+    width: 8rem;
+    background-color: black;
+    position: absolute;
+    animation-name: prin;
+    place-content: center;
+    color: white;
+    position: absolute;
+}
+
+.anim4:hover{
+    height: 15rem;
+    width: 10rem;
+    background-color: gray;
+    transition: 500ms;
+}
+
+.anim5{
+    top: 25;
+    left: 91.5%;
+    height: 2.5rem; 
+    width: 8rem;
+    background-color: black;
+    position: absolute;
+    animation-name: prin;
+    place-content: center;
+    color: white;
+    position: absolute;
+}
+
+.anim5:hover{
+    height: 15rem;
+    width: 10rem;
+    background-color: gray;
+    transition: 500ms;
+}  */
+
+.login-box {
+    position: absolute;
+    top: 8rem;
+    left: 9rem;
+    width: 320px;
+    background: #fff;
+    color: #333;
+    border-radius: 5px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+.login-box legend {
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+    font-size: 22px;
+}   
+
+/* .user-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #888;
+    outline: none;
+    background: transparent;
+}
+
+.login-box label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #888;
+} */
+
+/* @media (max-width: 800px){
+
+    .grid-layout{
+        height: 2370px;
+        display: grid;
+        grid-template-areas:  'ss ss    ' 
+                              'bc bc' 
+                              'rc rf'
+                              'rs rx'
+                              'frt frt';
+     grid-template-rows: 70px 1000px 500px 500px 300px;   
+    }
+    
+    .c1{
+        grid-area: ss;
+        background-color: green;
+    }
+    
+    .c2{
+        grid-area: bc;
+        background-color: green;
+    }
+    
+    .c3{
+        grid-area: rc;
+        background-color: white;
+    }
+    
+    .c4{
+        grid-area: rf;
+        background-color: white;
+    }
+    
+    .c5{
+        grid-area: rs;
+        background-color: white;
+    }
+    
+    .c6{
+        grid-area: rx;
+        background-color: white;
+    }
+    
+    .c7{
+        grid-area: frt;
+        background-color: white;
+    }
+}
+ */
+
+ header{
+    display: flex;
+    height: 70px;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ a{
+    text-decoration: none;
+    color: white;
+ }
+
+ nav a{
+    font-weight: 600;
+    padding: 100px;
+ }
+
+ nav a:hover{
+    color: yellow;
+ }
+ 
+
+ .logo{
+    display: flex;
+    align-items: center;
+ }
+
+ @media (max-width: 926px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+
+    nav a{
+        padding: 0px;
+    }
+ }

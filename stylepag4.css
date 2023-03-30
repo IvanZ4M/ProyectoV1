@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-size: 1.2rem;
+    min-height: 100%;
+    background-color: gray;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: black;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+.nav_checkbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10px 0px;
+
+}
+
+.logo{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+}
+
+.tab-nav{
+    outline: none;
+    display: none;
+}
+
+.label{
+    display: none;
+    color: white;
+}
+
+.burger{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+.content_nav{
+    grid-column: 3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content_nav li{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.content_nav li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.content_nav li a::after{
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: yellow;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 0.5s;
+}
+
+.content_nav li a:hover::after{
+    transform: scale(1, 1);
+}
+
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0px black;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+.grid-container{
+    display: grid;
+    gap: 15px;
+    grid-template-areas: 'nav nav nav'
+                         'crp1 crp1 crp2'
+                         'ft   ft   ft';
+    grid-template-rows: 70px 800px 200px;
+    grid-template-columns: auto auto 400px;
+}
+
+.navbar{
+    grid-area: nav;
+    background-color: black;
+}
+
+.c1{
+    grid-area: crp1;
+    border-radius: 10px;
+    background: url(./img/OPC\ PRINCIPAL\ 3\ U.png);
+    background-position: center; 
+    background-size: cover;
+}
+
+.c2{
+    grid-area: crp2;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    background: url(./img/colum1.png);
+    background-position: center; 
+    background-size: cover;
+}
+
+.footer{
+    grid-area: ft;
+    width: 100%;
+    background-color: black;
+}
+
+.footer .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+}
+
+.footer .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .grupo-1 .box figure img{
+    width: 150px;
+}
+
+.footer .grupo-1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer .grupo-1 .box p{
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.footer .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: gray;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.footer .grupo-1 .red-social a:hover{
+    color: yellow;
+}
+
+.footer .grupo-2{
+    background-color: gray;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+
+.footer .grupo-2 small{
+    font-size: 15px;
+}
+
+@media (max-width: 926px){
+    .grid-container{
+        gap: 50px;
+        grid-template: 
+        'nav' 70px
+        'crp1' 300px
+        'crp2' 300px
+        'ft' 200px /
+        auto; 
+    }
+
+    .c2{
+        background: url(./img/varcol2.png);
+        background-position: center; 
+        background-size: cover;
+    }
+
+    .nav_checkbox {
+        grid-template-columns: 1fr;
+        }
+        .content_nav {
+        position: fixed;
+        z-index: 1;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: black;
+        display: none;
+        text-align: center;
+        }
+        .content_nav li {
+        display: block;
+        padding: 20px;
+        }
+        .label {
+        display: block;
+        cursor: pointer;
+        }
+        #tab-nav:checked ~ .content_nav {
+        display: block;
+        }
+
+        .footer .grupo-1{
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 30px;
+            padding: 35px 0px;
+        
+        }
+
+        .footer .grupo-1 .box p{
+            color: white;
+            margin-bottom: 10px;
+        }
+}

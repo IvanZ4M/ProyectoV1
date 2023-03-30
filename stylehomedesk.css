@@ -1,0 +1,386 @@
+*{
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-size: 1.2rem;
+    min-height: 100%;
+    background-color: gray;
+}
+
+.anim{
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    animation-name: mov;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes mov{
+    0%{
+        top: 85%;
+        left: 0;
+    }
+    25%{
+        top: 85%;
+        left: 25%;
+    }
+    50%{
+        top: 85%;   
+        left: 50%;
+    }
+    75%{
+        top: 85%;
+        left: 75%;
+    }
+    100%{
+        top: 85%;
+        left: 100%;
+    }
+} 
+
+
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0px black;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: black;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+.nav_checkbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10px 0px;
+
+}
+
+.logo{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+}
+
+.tab-nav{
+    outline: none;
+    display: none;
+}
+
+.label{
+    display: none;
+    color: white;
+}
+
+.burger{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+.content_nav{
+    grid-column: 3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content_nav li{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.content_nav li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.content_nav li a::after{
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: yellow;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 0.5s;
+}
+
+.content_nav li a:hover::after{
+    transform: scale(1, 1);
+}
+
+
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 'nav   nav'
+                         'curp1 curp1'
+                         'curp2 curp2'
+                         'lp1 tx1'
+                         'tx2 lp2'
+                         'ft ft';
+    grid-template-rows: 70px 800px 800px 500px 500px 200px;
+}
+
+
+.navbar{
+    grid-area: nav;
+    background-color: black;
+}
+
+.c1{
+    grid-area: curp1;
+    border-radius: 40px;
+    background: url(./img/1laptop.jpg) no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+
+.c2{
+    grid-area: curp2;
+    border-radius: 40px;
+    background: url(./img/OPC\ PRINCIPAL\ 3\ U.png) no-repeat;
+    background-position: center; 
+    background-size: cover;
+
+}
+
+.c3{
+    grid-area: lp1;
+    border-radius: 40px;
+    background: url(./img/3laptop.jpg) no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+.c3:hover{
+    box-shadow: 10px 10px 10px black;
+    border: none;
+    outline: none;
+}
+
+.c4{
+    grid-area: tx1;
+    border-radius: 40px;
+    background: url(./img/Opera\ Snapshot_2023-03-28_212243_www.figma.com.png) no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+.c4:hover{
+    box-shadow: 10px 10px 10px black;
+    border: none;
+    outline: none;
+}
+
+.c5{
+    grid-area: lp2;
+    border-radius: 40px;
+    background: url(./img/5laptop.jpg) no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+.c5:hover{
+    box-shadow: 10px 10px 10px black;
+    border: none;
+    outline: none;
+}
+
+.c6{
+    grid-area: tx2;
+    border-radius: 40px;
+    background: url(./img/Opera2Snapshot_2023-03-28_212333_www.figma.com) no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+.c6:hover{
+    box-shadow: 10px 10px 10px black;
+    border: none;
+    outline: none;
+}
+
+.footer{
+    grid-area: ft;
+    width: 100%;
+    background-color: black;
+}
+
+.footer .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+}
+
+.footer .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .grupo-1 .box figure img{
+    width: 150px;
+}
+
+.footer .grupo-1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer .grupo-1 .box p{
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.footer .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: gray;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.footer .grupo-1 .red-social a:hover{
+    color: yellow;
+}
+
+.footer .grupo-2{
+    background-color: gray;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+
+.footer .grupo-2 small{
+    font-size: 15px;
+}
+
+
+@media (max-width: 926px){
+    .grid-container{
+        gap: 50px;
+        grid-template: 
+        'nav' 70px
+        'curp1' 400px
+        'curp2' 400px
+        'lp1' 300px
+        'tx1' 300px
+        'lp2' 300px
+        'tx2' 300px
+        'ft' 150px /
+        auto;
+
+    }
+
+    .nav_checkbox {
+        grid-template-columns: 1fr;
+        }
+        .content_nav {
+        position: fixed;
+        z-index: 1;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: black;
+        display: none;
+        text-align: center;
+        }
+        .content_nav li {
+        display: block;
+        padding: 20px;
+        }
+        .label {
+        display: block;
+        cursor: pointer;
+        }
+        #tab-nav:checked ~ .content_nav {
+        display: block;
+        }
+
+        .footer .grupo-1{
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 30px;
+            padding: 35px 0px;
+        
+        }
+
+        .footer .grupo-1 .box p{
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .anim{
+            height: 2rem;
+            width: 2rem;
+            position: absolute;
+            animation-name: mov;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes mov{
+            0%{
+                top: 50%;
+                left: 0;
+            }
+            25%{
+                top: 50%;
+                left: 25%;
+            }
+            50%{
+                top: 50%;   
+                left: 50%;
+            }
+            75%{
+                top: 50%;
+                left: 75%;
+            }
+            100%{
+                top: 50%;
+                left: 100%;
+            }
+        } 
+
+        
+}   
+
